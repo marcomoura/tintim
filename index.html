@@ -3,21 +3,23 @@
   <head>
     <title>Tintim Por Tintim</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/tintim.css" rel="stylesheet" media="screen">
   </head>
   <body>
     <div class="container row">
       <div class="span3">
-        <form>
-          <label for="item">Item</label><input type="text" class="input-large" name="item" placeholder="Nome" data-provide="typeahead" data-items="4" 
+        <form id='add'>
+          <label for="item">Item</label><input type="text" class="input-large" name="item" id="item" placeholder="Nome" data-provide="typeahead" data-items="4" 
           data-source="[&quot;aspirador de p&oacute;&quot;,&quot;blue ray player&quot;,&quot;cafeteira&quot;,&quot;centr&iacute;fuga de alimentos&quot;,&quot;climatizador&quot;,&quot;computador&quot;,&quot;condicionador de ar&quot;,&quot;cortador de frios&quot;,&quot;dvd player&quot;,&quot;espremedor de frutas&quot;,&quot;faca el&eacute;trica&quot;,&quot;ferro de passar&quot;,&quot;filmadora&quot;,&quot;fog&atilde;o&quot;,&quot;forno microondas&quot;,&quot;freezer&quot;,&quot;garrafa t&eacute;rmica&quot;,&quot;geladeira&quot;,&quot;home theater&quot;,&quot;jogo de facas para cozinha&quot;,&quot;liquidificador&quot;,&quot;m&aacute;quina de lavar lou&ccedil;as&quot;,&quot;m&aacute;quina de lavar roupas&quot;,&quot;micro system&quot;,&quot;miniforno el&eacute;trico&quot;,&quot;mixer de alimentos&quot;,&quot;multiprocessador&quot;,&quot;panela el&eacute;trica&quot;,&quot;r&aacute;dio-rel&oacute;gio&quot;,&quot;secadora de roupas&quot;,&quot;t&aacute;bua para passar roupa&quot;,&quot;tapetes&quot;,&quot;telefone&quot;,&quot;torradeira de p&atilde;o&quot;,&quot;tv&quot;,&quot;ventilador&quot;]" />
 
           <label for="price">Pre&ccedil;o</label>
           <div class="input-prepend input-append">
             <span class="add-on">R$</span>
-            <input type="number" id="appendedPrependedInput" class="input-mini" name="price" placeholder="00"/>
-            <span class="add-on">.00</span>
+            <input type="number" class="input-mini" name="price" id="price" placeholder="00"/>
+            <span class="add-on">,00</span>
           </div>
-          <label for="date">Data da compra</label><input type="date" name="date"/>
+          <label for="date">Data da compra</label><input type="date" name="date" id="date"/>
+          <button type="submit" class="btn btn btn-primary btn-large btn-block">adicionar</button>
         <form>
       </div>
       <div class="span8">
@@ -25,6 +27,14 @@
           <h1>TinTim por Timtin</h1>
           <p>Come&ccedil;e fazendo um invent&aacute;rio dos bens e seus valores.</p>
         </div>
+
+        <table id="inventory" class="hide table table-bordered" style="background-color:#eee">
+          <thead>
+            <tr> <th> Item </th> <th> Pre&ccedil;o </th> </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -42,5 +52,6 @@
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/tintim.js"></script>
   </body>
 </html>
